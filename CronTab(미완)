@@ -102,7 +102,7 @@
 
 ## test.sh ##
 
-!/bin/sh
+#!/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 DEL_DAY=7
 LOG_PATH=/home/script/test
