@@ -29,14 +29,14 @@
 #		############# DEL LOG #############						// 주석
 #	 	
 #		find $LOG_PATH -type f -name "*.log" -mtime +$DEL_DAY -exec rm -f {} \;		// 실행코드
-# 
 #
-#   ############# NEW LOG #############
-#   echo_timestamp() {											#
-#     echo "["`date "+%m-%d-%Y %H:%M:%S %z %Z"`"]" $*				//이해안된부분
-#   }													 파일 하나에 로그쌓고싶을 때 vi에 추가 
+#
+#		############# NEW LOG #############
+#		echo_timestamp() {
+#			echo "["`date "+%m-%d-%Y %H:%M:%S %z %Z"`"]" $*
+#		}
 #		
-#   echo_timestamp `실제로 수행되는 코드(ex| 매일 1씩 더한다)` >> 로그경로 2>&1	
+#		echo_timestamp `실제로 수행되는 코드(ex| 매일 1씩 더한다)` >> 로그경로 2>&1
 #
 #
 #
@@ -115,15 +115,11 @@ find $LOG_PATH -type f -name "*.log" -mtime +$DEL_DAY -exec rm -f {} \;
 
 
 
+
 ## crontab ##
+
 
 0 0 * * 1 test.sh
 * * * * * /home/script/test > /home/script/test_'date + \%Y\%m\%d\%H\%M\%S'.log 2>&1
-
-
-
-
-
-
 
 
