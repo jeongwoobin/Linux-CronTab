@@ -10,7 +10,7 @@
 #	find 파일이름 -type f -mtime +(일) -exec rm -f {} \;			// -exec (명령어) {} \;     :      -exec뒤의 명령어 실행 	| {} : 앞의 find경로에서 찾은 파일		          	#
 #										// rm	: 삭제명령어		-f : 삭제할파일 없을경우 그냥 넘어감					    	       	#
 #										// -mtime + : 수정된 날짜 시간기록을 찾음(날짜가 아니라 타임스탬프-24시간)			              			#
-#										// type -f : 파일만 찾음	(-d : 디렉토리를 찾음)						    		              #
+#										// type -f : 파일만 찾음	(-d : 디렉토리를 찾음)						    		                   #
 #																									#
 #																									#
 #																									#
@@ -20,9 +20,9 @@
 #	EX) 																								#
 #																									#
 #		#!/bin/sh									// Shell 스크립트 정의											#
-#		PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:		// sbin : root계정일 때 사용가능, 일반계정은 bin		| 	PATH는 명령어 경로		#
-#		DEL_DAY=7									// 삭제할 기간 수정시 여기만 수정		--> 7*24시간 전보다 오래된 파일				#
-#		LOG_PATH=(로그경로-파일이름빼고)						// 로그경로 바뀔시 여기만 수정										#
+#		PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:		// sbin : root계정일 때 사용가능, 일반계정은 bin		| 	PATH는 명령어 경로		      #
+#		DEL_DAY=7									// 삭제할 기간 수정시 여기만 수정		--> 7*24시간 전보다 오래된 파일		      		#
+#		LOG_PATH=(로그경로-파일이름빼고)						// 로그경로 바뀔시 여기만 수정							      			#
 #																									#
 #																									#
 #																									#
