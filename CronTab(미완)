@@ -31,7 +31,7 @@
 #		find $LOG_PATH -type f -name "*.log" -mtime +$DEL_DAY -exec rm -f {} \;		// 실행코드
 #
 #
-#		############# NEW LOG #############
+#		############# NEW LOG #############						// 하나의 파일에 로그 쌓을 때
 #		echo_timestamp() {
 #			echo "["`date "+%m-%d-%Y %H:%M:%S %z %Z"`"]" $*
 #		}
